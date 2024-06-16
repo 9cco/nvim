@@ -1,4 +1,5 @@
-vim.opt.guicursor = ""
+-- Make cursor always fat
+-- vim.opt.guicursor = ""
 
 -- Set numbers and relative numbers.
 vim.opt.nu = true
