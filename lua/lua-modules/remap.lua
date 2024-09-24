@@ -49,3 +49,6 @@ vim.keymap.set("n", "<leader>bn", ":bnext<CR>")
 vim.keymap.set("n", "<leader>bv", ":bprev<CR>")
 
 vim.keymap.set("n", "<leader><leader>", ":w<CR>")
+
+-- Uses RE2-like regex syntax instead of all the \-es
+vim.keymap.set("c", "s/", "s/\\v")
