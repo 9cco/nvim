@@ -49,3 +49,4 @@ vim.keymap.set("n", "<leader>bn", ":bnext<CR>")
 vim.keymap.set("n", "<leader>bv", ":bprev<CR>")
 
 vim.keymap.set("n", "<leader><leader>", ":w<CR>")
+vim.keymap.set("n", "<C-A>", "ggVG")
