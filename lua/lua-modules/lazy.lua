@@ -23,6 +23,11 @@ require("lazy").setup({
         build = ':TSUpdate'
     },
 
+    -- Install text selectings for selecting of functions
+    {
+        'nvim-treesitter/nvim-treesitter-textobjects'
+    },
+
     -- Install LSP-zero
     --- Uncomment the two plugins below if you want to manage the language servers from neovim
     -- {'williamboman/mason.nvim'},
@@ -44,5 +49,8 @@ require("lazy").setup({
                 -- Configuration here, or leave empty to use defaults
             })
         end
-    }
+    },
+
+    -- Install cmp
+    {}
 })

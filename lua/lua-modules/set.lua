@@ -22,4 +22,11 @@ vim.opt.termguicolors = true
 -- Make some margin of 8 lines when scrolling up and down.
 vim.opt.scrolloff = 8
 
+vim.diagnostic.config({
+    virtual_text = true,
+    signs = true,
+    underline = true,
+    update_in_insert = false,
+    severity_sort = true,
+})
 

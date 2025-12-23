@@ -45,11 +45,19 @@ vim.keymap.set("v", "<", "<gv")
 -- Buffer commands
 vim.keymap.set("n", "<leader>bs", ":buffers<CR>:b")
 vim.keymap.set("n", "<leader>bd", ":bdelete<CR>")
-vim.keymap.set("n", "<leader>bn", ":bnext<CR>")
-vim.keymap.set("n", "<leader>bv", ":bprev<CR>")
+vim.keymap.set("n", "<leader>bo", ":bnext<CR>")
+vim.keymap.set("n", "<leader>bi", ":bprev<CR>")
 
 vim.keymap.set("n", "<leader><leader>", ":w<CR>")
 vim.keymap.set("n", "<C-A>", "ggVG")
 
 -- Uses RE2-like regex syntax instead of all the \-es
 vim.keymap.set("c", "s/", "s/\\v")
+
+-- Configure remap to show LSP diagnostics
+vim.keymap.set("n", "<leader>d", function()
+    vim.diagnostic.open_float(nil, { focusable = false, border = "rounded" })
+end, { noremap = true, silent = true })
+
+-- Configure control backspace to delete word
+vim.keymap.set("i", "<C-H>", "<C-w>")
