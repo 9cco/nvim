@@ -11,6 +11,16 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "yaml",
+    callback = function()
+        vim.bo.tabstop = 2
+        vim.bo.softtabstop = 2
+        vim.bo.shiftwidth = 2
+        vim.bo.expandtab = true
+    end,
+})
+
 vim.opt.smartindent = true
 
 -- Make search highlighting stop after search is complete
@@ -56,3 +66,4 @@ end
 
 -- Make statusline show buffer number and percentage
 vim.o.statusline = statusline()
+
